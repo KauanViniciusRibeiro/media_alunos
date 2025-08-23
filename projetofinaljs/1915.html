@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1915 - A Guerra de Trincheiras</title>
+  <link rel="stylesheet" href="static/css/style.css">
+  <style>
+    .content h2 { font-size: 2rem; color: #ff4c4c; margin-bottom: 18px; }
+    .content ul { margin: 18px 0 0 30px; font-size: 1.08rem; }
+    .content li { margin-bottom: 7px; }
+    .content strong { color: #ffd6d6; }
+  </style>
+</head>
+<body>
+  <section class="content" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;">
+    <a href="linhatempo.html" class="back-btn" style="align-self:flex-end;margin-bottom:10px;">⬅ Voltar à Linha do Tempo</a>
+    <h2>1915 – A Guerra de Trincheiras</h2>
+    <p>
+      Em 1915, o conflito entrou em uma fase marcada pelo impasse militar.<br>
+      As frentes ocidentais ficaram travadas em trincheiras: corredores subterrâneos improvisados, onde soldados viviam em condições desumanas.<br>
+      O espaço entre as trincheiras era chamado de “terra de ninguém”, repleto de cadáveres, crateras, lama e arames farpados.<br>
+      Foi o ano em que surgiram novas armas: uso em larga escala de gases tóxicos (cloro e gás mostarda), metralhadoras mais eficientes, artilharia pesada e lança-chamas.<br>
+      A Itália, que fazia parte da Tríplice Aliança, mudou de lado, unindo-se à Entente em troca de promessas de territórios.<br>
+      Batalhas como Verdun e Somme começaram a dar sinais da brutalidade da guerra, com milhões de baixas sem ganhos territoriais significativos.<br>
+      O impasse fez da guerra um conflito de resistência e desgaste.
+    </p>
+    <ul>
+      <li><strong>Vida nas trincheiras.</strong></li>
+      <li>Uso de armas químicas.</li>
+      <li>Itália muda de lado.</li>
+      <li>Início de batalhas sangrentas (Verdun e Somme).</li>
+    </ul>
+  </section>
+  <script>
+    const content = document.querySelector('.content');
+    if (content) {
+      content.style.animation = "none";
+      void content.offsetWidth;
+      content.style.animation = null;
+    }
+  </script>
+</body>
+</html>

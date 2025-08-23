@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consequências - Primeira Guerra Mundial</title>
+  <link rel="stylesheet" href="static/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Primeira Guerra Mundial</h1>
+    <nav>
+      <ul>
+        <li><a href="introducao.html">Introdução</a></li>
+        <li><a href="linhatempo.html">Linha do Tempo</a></li>
+        <li><a href="consequencias.html" class="active">Consequências</a></li>
+        <li><a href="inicioquiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="content glass">
+    <h2>Consequências</h2>
+    <!-- Carrossel de Imagens - Consequências -->
+    <div class="carousel" id="carousel-cons">
+      <button class="carousel-btn prev" onclick="moveCarousel('carousel-cons', -1)">&#10094;</button>
+      <div class="carousel-images">
+        <img src="static/img/cons1.jpg" alt="Ruínas após a guerra" class="carousel-img active">
+        <img src="static/img/cons2.jpg" alt="Assinatura do Tratado de Versalhes" class="carousel-img">
+        <img src="static/img/cons3.jpg" alt="Mapa da Europa pós-guerra" class="carousel-img">
+      </div>
+      <button class="carousel-btn next" onclick="moveCarousel('carousel-cons', 1)">&#10095;</button>
+    </div>
+    <div class="carousel-caption" id="carousel-cons-caption">
+      <span>Ruínas após a guerra</span>
+    </div>
+    <!-- Fim do Carrossel -->
+    <span class="tag">🔹 Perdas humanas</span>
+    <ul>
+      <li>Aproximadamente <strong>10 milhões de mortos</strong> e mais de 20 milhões de feridos.</li>
+      <li>Uma geração inteira traumatizada pelos horrores da guerra.</li>
+      <li>Invalidez, fome, doenças e impactos psicológicos marcaram sobreviventes.</li>
+    </ul>
+
+    <span class="tag">🔹 Tratado de Versalhes (1919)</span>
+    <ul>
+      <li>Alemanha responsabilizada pela guerra.</li>
+      <li>Condições impostas:
+        <ul>
+          <li>Pagamento de pesadas indenizações.</li>
+          <li>Redução do exército para 100 mil soldados.</li>
+          <li>Devolução da Alsácia-Lorena à França.</li>
+          <li>Perda de todas as colônias.</li>
+        </ul>
+      </li>
+      <li>Foi considerada uma “paz punitiva”, que gerou ressentimento e abriu espaço para o nazismo.</li>
+    </ul>
+
+    <span class="tag">🔹 Transformações políticas e territoriais</span>
+    <ul>
+      <li>Queda de grandes impérios: Alemão, Austro-Húngaro, Otomano e Russo.</li>
+      <li>Surgimento de novos países: Polônia, Finlândia, Iugoslávia, Tchecoslováquia, entre outros.</li>
+      <li>A Rússia tornou-se socialista após a Revolução de 1917.</li>
+      <li>Os Estados Unidos emergiram como potência mundial.</li>
+    </ul>
+
+    <span class="tag">🔹 Impacto econômico e social</span>
+    <ul>
+      <li>Europa devastada economicamente e fisicamente.</li>
+      <li>Infraestruturas destruídas, inflação, desemprego e miséria.</li>
+      <li>Crescimento do papel das mulheres na sociedade, pois muitas ocuparam funções de trabalho antes exclusivas dos homens.</li>
+    </ul>
+
+    <span class="tag">🔹 Caminho para a Segunda Guerra Mundial</span>
+    <ul>
+      <li>O ressentimento alemão pelo Tratado de Versalhes e a crise econômica dos anos 1920–30 favoreceram o crescimento do nazismo.</li>
+      <li>Apenas 21 anos após o fim da Primeira Guerra, a Europa mergulhou em novo conflito global: a Segunda Guerra Mundial (1939–1945).</li>
+    </ul>
+  </section>
+</body>
+<script>
+  // Carrossel de imagens reutilizável
+  function moveCarousel(carouselId, direction) {
+    const carousel = document.getElementById(carouselId);
+    const imgs = carousel.querySelectorAll('.carousel-img');
+    const captions = carouselId==='carousel-intro' ?
+      ['Soldados na trincheira','Mapa da Europa 1914','Cartaz de propaganda da guerra'] :
+      ['Ruínas após a guerra','Assinatura do Tratado de Versalhes','Mapa da Europa pós-guerra'];
+    let idx = Array.from(imgs).findIndex(img => img.classList.contains('active'));
+    imgs[idx].classList.remove('active');
+    setTimeout(() => {
+      idx = (idx + direction + imgs.length) % imgs.length;
+      imgs[idx].classList.add('active');
+      // Atualiza legenda
+      if(carouselId==='carousel-intro') {
+        document.getElementById('carousel-intro-caption').innerHTML = `<span>${captions[idx]}</span>`;
+      } else {
+        document.getElementById('carousel-cons-caption').innerHTML = `<span>${captions[idx]}</span>`;
+      }
+    }, 60);
+  }
+</script>
+</html>

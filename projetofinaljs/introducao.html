@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introdução - Primeira Guerra Mundial</title>
+  <link rel="stylesheet" href="static/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    .content h1 {
+      font-size: 2.3rem;
+      color: #6b5e3a;
+      margin-bottom: 18px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    .content h2 {
+      font-size: 1.5rem;
+      color: #6b5e3a;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+    .content ul, .content ol {
+      margin: 15px 0 15px 30px;
+      font-size: 1.08rem;
+    }
+    .content li {
+      margin-bottom: 7px;
+    }
+    .content .tag {
+      font-weight: bold;
+      color: #6b5e3a;
+      font-size: 1.1rem;
+      margin-top: 18px;
+      display: block;
+    }
+    .content strong {
+      color: #6b5e3a;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Primeira Guerra Mundial</h1>
+    <nav>
+      <ul>
+        <li><a href="introducao.html" class="active">Introdução</a></li>
+        <li><a href="linhatempo.html">Linha do Tempo</a></li>
+        <li><a href="consequencias.html">Consequências</a></li>
+        <li><a href="inicioquiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="content glass">
+    <h1>A Primeira Guerra Mundial (1914–1918)</h1>
+    <!-- Carrossel de Imagens - Introdução -->
+    <div class="carousel" id="carousel-intro">
+      <button class="carousel-btn prev" onclick="moveCarousel('carousel-intro', -1)">&#10094;</button>
+      <div class="carousel-images">
+        <img src="static/img/trin.jpg" alt="Soldados na trincheira" class="carousel-img active">
+        <img src="static/img/map.jpg" alt="Mapa da Europa 1914" class="carousel-img">
+        <img src="static/img/cart.jpg" alt="Cartaz de propaganda da guerra" class="carousel-img">
+      </div>
+      <button class="carousel-btn next" onclick="moveCarousel('carousel-intro', 1)">&#10095;</button>
+    </div>
+    <div class="carousel-caption" id="carousel-intro-caption">
+      <span>Soldados na trincheira</span>
+    </div>
+    <!-- Fim do Carrossel -->
+    <p style="font-size:1.18rem; color:#000000; margin-bottom:22px;">
+      A Primeira Guerra Mundial foi o primeiro grande conflito global do século XX, envolvendo países de diferentes continentes.<br>
+      É chamada de <strong>“guerra total”</strong>, porque as nações participantes mobilizaram todos os seus recursos: economia, indústrias, soldados e até a população civil.
+    </p>
+
+    <span class="tag">🔹 Causas principais</span>
+    <h2>Nacionalismo</h2>
+    <ul>
+      <li>Rivalidades entre países que buscavam expandir territórios e influência.</li>
+      <li>Alemanha defendia o <strong>pangermanismo</strong> (unir todos os povos germânicos).</li>
+      <li>França queria revanche pela derrota na Guerra Franco-Prussiana (1870–71) e pela perda da Alsácia-Lorena.</li>
+      <li>Nos Bálcãs, a Sérvia buscava unificar os povos eslavos, em oposição ao Império Austro-Húngaro.</li>
+    </ul>
+    <h2>Imperialismo</h2>
+    <ul>
+      <li>As potências europeias competiam por colônias na África e na Ásia.</li>
+      <li>O crescimento industrial e militar da Alemanha ameaçava Inglaterra e França.</li>
+    </ul>
+    <h2>Corrida armamentista</h2>
+    <ul>
+      <li>Desenvolvimento acelerado de armas, exércitos e marinhas de guerra.</li>
+      <li>Cada nação buscava estar mais preparada que a outra para o confronto.</li>
+    </ul>
+    <h2>Alianças militares</h2>
+    <ul>
+      <li><strong>Tríplice Entente:</strong> França, Rússia e Reino Unido.</li>
+      <li><strong>Tríplice Aliança:</strong> Alemanha, Áustria-Hungria e Itália (que mudaria de lado em 1915).</li>
+    </ul>
+    <h2>Estopim do conflito</h2>
+    <ul>
+      <li>O assassinato do arquiduque Francisco Ferdinando, herdeiro do trono austro-húngaro, em Sarajevo (28/06/1914).</li>
+      <li>O episódio gerou uma série de declarações de guerra em cadeia, mergulhando a Europa em conflito.</li>
+    </ul>
+
+    <span class="tag">🔹 Impactos imediatos</span>
+    <ul>
+      <li>Uma guerra que se imaginava curta transformou-se em quatro anos de devastação.</li>
+      <li>Mais de <strong>10 milhões de mortos</strong> e milhões de feridos.</li>
+      <li>Uso de novas tecnologias militares: metralhadoras, artilharia pesada, gases tóxicos, tanques e aviões.</li>
+    </ul>
+  </section>
+  <script>
+    // Carrossel de imagens reutilizável
+    function moveCarousel(carouselId, direction) {
+      const carousel = document.getElementById(carouselId);
+      const imgs = carousel.querySelectorAll('.carousel-img');
+      const captions = [
+        'Soldados na trincheira',
+        'Mapa da Europa 1914',
+        'Cartaz de propaganda da guerra'
+      ];
+      let idx = Array.from(imgs).findIndex(img => img.classList.contains('active'));
+      imgs[idx].classList.remove('active');
+      setTimeout(() => {
+        idx = (idx + direction + imgs.length) % imgs.length;
+        imgs[idx].classList.add('active');
+        // Atualiza legenda
+        if(carouselId==='carousel-intro') {
+          document.getElementById('carousel-intro-caption').innerHTML = `<span>${captions[idx]}</span>`;
+        }
+      }, 60);
+    }
+  </script>
+</body>
+</html>

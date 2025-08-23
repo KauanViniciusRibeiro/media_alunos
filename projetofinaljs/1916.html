@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1916 - O ano das grandes batalhas</title>
+  <link rel="stylesheet" href="static/css/style.css">
+  <style>
+    .content h2 { font-size: 2rem; color: #ff4c4c; margin-bottom: 18px; }
+    .content ul { margin: 18px 0 0 30px; font-size: 1.08rem; }
+    .content li { margin-bottom: 7px; }
+    .content strong { color: #ffd6d6; }
+  </style>
+</head>
+<body>
+  <section class="content" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;">
+    <a href="linhatempo.html" class="back-btn" style="align-self:flex-end;margin-bottom:10px;">⬅ Voltar à Linha do Tempo</a>
+    <h2>1916 – O ano das grandes batalhas</h2>
+    <p>
+      1916 foi um dos anos mais sangrentos da guerra.<br>
+      A Batalha de Verdun (fevereiro a dezembro) durou quase um ano, com cerca de 700 mil baixas entre franceses e alemães. O lema francês foi “Eles não passarão!”.<br>
+      A Batalha do Somme (julho a novembro) mostrou o uso de novas tecnologias, como os primeiros tanques de guerra. Houve mais de 1 milhão de mortos e feridos, mas sem mudanças estratégicas significativas.<br>
+      No mar, ocorreu a Batalha da Jutlândia, o maior confronto naval entre as marinhas britânica e alemã. Apesar de indecisa, a Inglaterra manteve o bloqueio naval à Alemanha.<br>
+      Esse bloqueio foi fundamental para enfraquecer o abastecimento alemão e aumentar a fome entre sua população.<br>
+      Foi um ano de massacres e estagnação, revelando o quão destrutiva seria essa guerra.
+    </p>
+    <ul>
+      <li><strong>Batalha de Verdun (700 mil baixas).</strong></li>
+      <li>Batalha do Somme (1 milhão de mortos/feridos).</li>
+      <li>Primeiros tanques usados.</li>
+      <li>Batalha naval da Jutlândia.</li>
+    </ul>
+  </section>
+  <script>
+    const content = document.querySelector('.content');
+    if (content) {
+      content.style.animation = "none";
+      void content.offsetWidth;
+      content.style.animation = null;
+    }
+  </script>
+</body>
+</html>
