@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz - Primeira Guerra Mundial</title>
+  <link rel="stylesheet" href="static/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    body.fullscreen-quiz, body.fullscreen-quiz .content {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      min-height: 100vh;
+      background: linear-gradient(120deg, #e7dac6 0%, #b7a77a 100%);
+      overflow: hidden;
+    }
+    body.fullscreen-quiz header,
+    body.fullscreen-quiz nav,
+    body.fullscreen-quiz h1 {
+      display: none !important;
+    }
+    body.fullscreen-quiz #quiz-container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+    }
+    #quiz-container .content {
+      width: 98vw;
+      max-width: 1200px;
+      max-height: 70px;
+      min-height: 70vh;
+      margin: 0 auto;
+      border-radius: 14px;
+      box-shadow: 0 4px 24px 0 rgba(80, 60, 30, 0.10);
+      background: #f6f1e7;
+      border: 1.5px solid #d2c2a1;
+      animation: fadeIn 0.7s;
+    }
+    #back-to-site-btn, #back-to-site-end-btn, #restart-quiz-btn {
+      margin: 10px 5px;
+      padding: 12px 22px;
+      font-size: 1.05rem;
+      border: none;
+      border-radius: 7px;
+      background: #b7a77a;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 2px 12px 0 #b7a77a44;
+    }
+    #back-to-site-btn:hover, #back-to-site-end-btn:hover, #restart-quiz-btn:hover {
+      background: #6b5e3a;
+      color: #fff;
+      transform: scale(1.04);
+    }
+    #quiz-end-actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Primeira Guerra Mundial</h1>
+    <nav>
+      <ul>
+        <li><a href="introducao.html">Introdução</a></li>
+        <li><a href="linhatempo.html">Linha do Tempo</a></li>
+        <li><a href="consequencias.html">Consequências</a></li>
+        <li><a href="inicioquiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="quiz-container">
+    <button id="back-to-site-btn" style="display:none;">Voltar ao site</button>
+    <div id="quiz-progress-bar">
+      <div id="progress-bar-inner"></div>
+      <span id="progress-text">Questão 1/10</span>
+      <span id="timer">20:00</span>
+    </div>
+    <section class="content paper">
+      <h2>Quiz - Primeira Guerra Mundial</h2>
+      <form id="quizForm" autocomplete="off">
+        <!-- Questão 1 -->
+        <div class="question" data-q="1" style="display:block;">
+          <h3>1. (Enem-2014) Três décadas — de 1884 a 1914 — separam o século XIX — que terminou com a corrida dos países europeus para a África e com o surgimento dos movimentos de unificação nacional na Europa — do século XX, que começou com a Primeira Guerra Mundial. É o período do Imperialismo, da quietude estagnante na Europa e dos acontecimentos empolgantes na Ásia e na África.<br><br>
+          O processo histórico citado contribuiu para a eclosão da Primeira Grande Guerra na medida em que</h3>
+          <div class="options">
+            <label><input type="radio" name="q1" value="A"> a) difundiu as teorias socialistas.</label>
+            <label><input type="radio" name="q1" value="B"> b) acirrou as disputas territoriais.</label>
+            <label><input type="radio" name="q1" value="C"> c) superou as crises econômicas.</label>
+            <label><input type="radio" name="q1" value="D"> d) multiplicou os conflitos religiosos.</label>
+            <label><input type="radio" name="q1" value="E"> e) conteve os sentimentos xenófobos.</label>
+          </div>
+          <button type="button" class="next-btn">Validar resposta</button>
+        </div>
+        <!-- Questão 2 -->
+        <div class="question" data-q="2" style="display:none;">
+          <h3>2. (UFF) Muitos historiadores consideram a Primeira Guerra Mundial como fator de peso na crise das sociedades liberais contemporâneas. Assinale a opção que contém argumentos todos corretos a favor de tal opinião.</h3>
+          <div class="options">
+            <label><input type="radio" name="q2" value="A"> a) A economia de guerra levou a um intervencionismo de Estado sem precedentes; a “união sagrada” foi invocada em favor de sérias restrições às liberdades civis e políticas e, em função da guerra recém-terminada, eclodiram em 1920 graves dificuldades econômicas que abalaram os países liberais, sobretudo através da inflação.</label>
+            <label><input type="radio" name="q2" value="B"> b) Em todos os países, a economia de guerra forçou a abolir os sindicatos operários, a confiscar as fortunas privadas e a fechar os Parlamentos, pondo assim em cheque os pilares básicos da sociedade liberal.</label>
+            <label><input type="radio" name="q2" value="C"> c) Durante a guerra foi preciso instaurar regimes autoritários e ditatoriais em países antes liberais como a França e a Inglaterra, num prenúncio do fascismo ainda por vir.</label>
+            <label><input type="radio" name="q2" value="D"> d) A guerra transformou Estados antes liberais em gestores de uma economia militarizada que utilizou de novo o trabalho servil para a confecção de armas e munições, em flagrante desrespeito às liberdades individuais.</label>
+            <label><input type="radio" name="q2" value="E"> e) Derrotadas na Primeira Guerra Mundial, as grandes potências liberais foram, por tal razão, impotentes para conter, a seguir, o desafio comunista e o fascismo.</label>
+          </div>
+          <button type="button" class="prev-btn">Anterior</button>
+          <button type="button" class="next-btn">Validar resposta</button>
+        </div>
+        <!-- Questão 3 -->
+        <div class="question" data-q="3" style="display:none;">
+          <h3>3. (Enem-2009) A primeira metade do século XX foi marcada por conflitos e processos que a inscreveram como um dos mais violentos períodos da história humana.<br><br>
+          Entre os principais fatores que estiveram na origem dos conflitos ocorridos durante a primeira metade do século XX estão:</h3>
+          <div class="options">
+            <label><input type="radio" name="q3" value="A"> a) a crise do colonialismo, a ascensão do nacionalismo e do totalitarismo.</label>
+            <label><input type="radio" name="q3" value="B"> b) o enfraquecimento do império britânico, a Grande Depressão e a corrida nuclear.</label>
+            <label><input type="radio" name="q3" value="C"> c) o declínio britânico, o fracasso da Liga das Nações e a Revolução Cubana.</label>
+            <label><input type="radio" name="q3" value="D"> d) a corrida armamentista, o terceiro-mundismo e o expansionismo soviético.</label>
+            <label><input type="radio" name="q3" value="E"> e) a Revolução Bolchevique, o imperialismo e a unificação da Alemanha.</label>
+          </div>
+          <button type="button" class="prev-btn">Anterior</button>
+          <button type="button" class="next-btn">Validar resposta</button>
+        </div>
+        <!-- Questão 4 -->
+        <div class="question" data-q="4" style="display:none;">
+          <h3>4. (PUC-Campinas) Em relação às causas da Primeira Guerra Mundial é correto afirmar que:</h3>
+          <div class="options">
+            <label><input type="radio" name="q4" value="A"> a) A incapacidade dos Estados liberais em solucionar a crise econômica do século XIX colocou em xeque toda a estrutura do sistema capitalista. A instabilidade política e social das nações europeias impulsionou as disputas colonialistas e o conflito entre as potências.</label>
+            <label><input type="radio" name="q4" value="B"> b) A desigualdade de desenvolvimento das nações capitalistas europeias acentuou a rivalidade imperialista. A disputa colonial marcada por um nacionalismo agressivo e pela corrida armamentista expandiu os pontos de atrito entre as potências.</label>
+            <label><input type="radio" name="q4" value="C"> c) O sucesso da política de apaziguamento e do sistema de aliança equilibrou o sistema de forças entre as nações europeias, acirrando as lutas de conquista das colônias da África e da Ásia.</label>
+            <label><input type="radio" name="q4" value="D"> d) O expansionismo na Áustria, a invasão da Polônia pelas tropas alemãs assustaram a Inglaterra e a França, que reagiram contra a agressão declarando guerra ao inimigo.</label>
+            <label><input type="radio" name="q4" value="E"> e) O desequilíbrio entre a produção e consumo incentivou a conquista de novos mercados produtores de matérias-primas e consumidores de bens de produção reativando as rivalidades entre os países europeus e os da América do Norte.</label>
+          </div>
+          <button type="button" class="prev-btn">Anterior</button>
+          <button type="button" class="next-btn">Validar resposta</button>
+        </div>
+        <!-- Questão 5 -->
+        <div class="question" data-q="5" style="display:none;">
+          <h3>5. (Unirio) Dentre os fatores que conduziram à Primeira Guerra Mundial (1914-1918), destacamos o(a):</h3>
+          <div class="options">
+            <label><input type="radio" name="q5" value="A"> a) nacionalismo eslavo aliado à desagregação do Império Turco.</label>
+            <label><input type="radio" name="q5" value="B"> b) acordo militar anglo-germânico visando à partilha da África.</label>
+            <label><input type="radio" name="q5" value="C"> c) desequilíbrio internacional provocado pela aliança da Rússia com o Império Austro-Húngaro.</label>
+            <label><input type="radio" name="q5" value="D"> d) descontentamento da França frente à ocupação no Marrocos.</label>
+            <label><input type="radio" name="q5" value="E"> e) oposição do Imperador Francisco Ferdinando à admissão da Sérvia no Império Austro-Húngaro.</label>
+          </div>
+          <button type="button" class="prev-btn">Anterior</button>
+          <button type="button" class="next-btn">Validar resposta</button>
+        </div>
+        <!-- Questão 6 -->
+        <div class="question" data-q="6" style="display:none;">
+          <h3>6. (UFPel-2008) "Artigos do Tratado de Versalhes:<br>
+          Art. 45 - Alemanha cede à França a propriedade absoluta [...], com direito total de exploração, das minas de carvão situadas na bacia do rio Sarre.<br>
+          Art. 119 - A Alemanha renuncia, em favor das potências aliadas, a todos os direitos sobre as colônias ultramarinas. Art. 171 - Estão proibidas na Alemanha a fabricação e a importação de carros blindados, tanques, ou qualquer outro instrumento que sirva a objetivos de guerra.<br>
+          Art. 232 - A Alemanha se compromete a reparar todos os danos causados à população civil das potências aliadas e a seus bens".<br>
+          MARQUES, Adhemar Martins et all. "História Contemporânea Textos e documentos". São Paulo: Contexto, 1999.<br><br>
+          De acordo com o texto e com seus conhecimentos é correto afirmar que o Tratado de Versalhes:</h3>
+          <div class="options">
+            <label><input type="radio" name="q6" value="A"> a) Encerrou a 2ª Guerra Mundial, fazendo com que a Alemanha perdesse as colônias ultramarinas para os países dos Aliados.</label>
+            <label><input type="radio" name="q6" value="B"> b) Extinguiu a Liga das Nações, propondo a criação da Organização das Nações Unidas (ONU), em 1945, com o objetivo de preservar a paz mundial.</label>
+            <label><input type="radio" name="q6" value="C"> c) Estimulou a competição econômica e colonial entre os países europeus, culminando na 1ª Guerra Mundial.</label>
+            <label><input type="radio" name="q6" value="D"> d) Permitiu que as potências aliadas dividissem a Alemanha no fim da 2ª Guerra Mundial, em quatro zonas de ocupação: francesa, britânica, americana e soviética.</label>
+            <label><input type="radio" name="q6" value="E"> e) Impôs duras sanções à Alemanha, no fim da 1ª Guerra Mundial, fazendo ressurgir o nacionalismo e reorganizando as forças políticas do país.</label>
+          </div>
+          <button type="button" class="prev-btn">Anterior</button>
+          <button type="button" class="next-btn">Validar resposta</button>
+        </div>
+        <!-- Questão 7 -->
+        <div class="question" data-q="7" style="display:none;">
+          <h3>7. (Mackenzie-1996) Dentre as causas da Primeira Grande Guerra, destaca-se a questão balcânica, que pode ser associada:</h3>
+          <div class="options">
+            <label><input type="radio" name="q7" value="A"> a) à formação de novas nacionalidades, como a Iugoslava, sob a tutela da Alemanha.</label>
+            <label><input type="radio" name="q7" value="B"> b) às disputas coloniais na Ásia e na África entre a França e a Inglaterra.</label>
+            <label><input type="radio" name="q7" value="C"> c) ao interesse russo em abrir os estreitos de Bósforo e Dardanelos, ao nacionalismo eslavo e ao temor austríaco quanto à formação da Grande Sérvia.</label>
+            <label><input type="radio" name="q7" value="D"> d) às desavenças entre o Império Austro-Húngaro e a Inglaterra ligadas à anexação da Bósnia-Herzegóvina.</label>
+            <label><input type="radio" name="q7" value="E"> e) ao assassinato do Príncipe Herdeiro, Francisco Ferdinando, e as questões pendentes relacionadas ao Tratado de Brest-Litowsky e o desmembramento da Áustria-Hungria.</label>
+          </div>
+          <button type="button" class="prev-btn">Anterior</button>
+          <button type="button" class="next-btn">Validar resposta</button>
+        </div>
+        <!-- Questão 8 -->
+        <div class="question" data-q="8" style="display:none;">
+          <h3>8. (PUC-Campinas) A Primeira Guerra Mundial, que enfraqueceu a Europa em população e importância econômica:</h3>
+          <div class="options">
+            <label><input type="radio" name="q8" value="A"> a) acarretou a criação da Liga Pan-Germânica encarregada de efetivar o "Anschluss".</label>
+            <label><input type="radio" name="q8" value="B"> b) contribuiu para a concretização do Pacto Germânico-Soviético de não agressão, firmado entre Guilherme II e Nicolau II.</label>
+            <label><input type="radio" name="q8" value="C"> c) contribuiu para a formação, dentro da Sérvia de sociedades secretas, tais como a Mão Negra fundada em 1921.</label>
+            <label><input type="radio" name="q8" value="D"> d) contribuiu para a criação de um clima favorável para a aceitação dos princípios do socialismo utópico.</label>
+            <label><input type="radio" name="q8" value="E"> e) acarretou a difusão das ideias que apontavam as contradições do liberalismo.</label>
+          </div>
+          <button type="button" class="prev-btn">Anterior</button>
+          <button type="button" class="next-btn">Validar resposta</button>
+        </div>
+        <!-- Questão 9 -->
+        <div class="question" data-q="9" style="display:none;">
+          <h3>9. (PUC-RS) Dentre os desdobramentos político-econômicos imediatos na ordem internacional produzidos pela Primeira Guerra Mundial (1914-1918), é correto apontar:</h3>
+          <div class="options">
+            <label><input type="radio" name="q9" value="A"> a) o fim dos privilégios aduaneiros da França no comércio com a Alemanha.</label>
+            <label><input type="radio" name="q9" value="B"> b) o surgimento da Organização das Nações Unidas, por meio do Tratado de Sevres.</label>
+            <label><input type="radio" name="q9" value="C"> c) a criação da Iugoslávia, como decorrência das questões políticas dos Bálcãs.</label>
+            <label><input type="radio" name="q9" value="D"> d) a anexação da Palestina, da Síria e do Iraque ao Império Otomano.</label>
+            <label><input type="radio" name="q9" value="E"> e) a incorporação da Hungria e da Tchecoslováquia aos domínios austríacos.</label>
+          </div>
+          <button type="button" class="prev-btn">Anterior</button>
+          <button type="button" class="next-btn">Validar resposta</button>
+        </div>
+        <!-- Questão 10 -->
+        <div class="question" data-q="10" style="display:none;">
+          <h3>10. (Mackenzie) Ao término da Primeira Grande Guerra, as potências vencedoras responsabilizaram a Alemanha pela guerra e foi-lhe imposto um tratado punitivo, o Tratado de Versalhes, que teve como consequências:</h3>
+          <div class="options">
+            <label><input type="radio" name="q10" value="A"> a) degradação dos ideais liberais e democráticos, agitações políticas de esquerda - como o movimento espartaquista - crise econômica e desemprego.</label>
+            <label><input type="radio" name="q10" value="B"> b) enfraquecimento dos sentimentos nacionais, militarização do Estado Alemão, recuperação econômica e incorporação de Gdansk.</label>
+            <label><input type="radio" name="q10" value="C"> c) anexação das colônias de Togo e Camarões, a afirmação dos ideais liberais e democráticos e a valorização do marco alemão.</label>
+            <label><input type="radio" name="q10" value="D"> d) prosperidade econômica, rearmamento alemão, desmembramento da Alemanha e fortalecimento dos partidos liberais.</label>
+            <label><input type="radio" name="q10" value="E"> e) surgimento da República Democrática Alemã e da República Federal Alemã, fortalecimento do nazismo, militarismo e diminuição do desemprego.</label>
+          </div>
+          <button type="button" class="prev-btn">Anterior</button>
+          <button type="submit" class="finish-btn">Finalizar Quiz</button>
+        </div>
+        <div id="quiz-end-actions" style="display:none;">
+          <button id="restart-quiz-btn" type="button">Reiniciar Quiz</button>
+          <button id="back-to-site-end-btn" type="button">Voltar ao site</button>
+        </div>
+        <p id="msg"></p>
+  <div id="quiz-gabarito" style="display:none; margin-top:30px; max-height:340px; overflow-y:auto; border:1.5px solid #b7a77a; border-radius:10px; background:#f9f6ef; box-shadow:0 2px 12px #b7a77a33; padding:18px 18px 12px 18px;"></div>
+      </form>
+    </section>
+  </div>
+  <script src="static/js/script.js"></script>
+  <script>
+    // Fullscreen logic and interactivity
+    document.addEventListener('DOMContentLoaded', function() {
+      const quizContainer = document.getElementById('quiz-container');
+      const backBtn = document.getElementById('back-to-site-btn');
+      const backBtnEnd = document.getElementById('back-to-site-end-btn');
+      const restartBtn = document.getElementById('restart-quiz-btn');
+      const quizForm = document.getElementById('quizForm');
+      const quizEndActions = document.getElementById('quiz-end-actions');
+      const questions = document.querySelectorAll('.question');
+      const progressBar = document.getElementById('progress-bar-inner');
+      const progressText = document.getElementById('progress-text');
+      const timerEl = document.getElementById('timer');
+      const gabaritoDiv = document.getElementById('quiz-gabarito');
+      let currentQuestion = 0;
+      let totalQuestions = questions.length;
+      let timeLeft = 20 * 60; // 20 minutos em segundos
+      let timerInterval;
+
+      // Gabarito e explicações
+      const gabarito = [
+        {resp:'B', explic:'O imperialismo europeu levou à disputa por territórios e colônias, aumentando as tensões entre as potências. Essas rivalidades territoriais foram um dos principais fatores que culminaram na eclosão da Primeira Guerra Mundial.'},
+        {resp:'A', explic:'A Primeira Guerra Mundial forçou os países a adotar uma economia de guerra, com forte intervenção do Estado, restrições às liberdades civis e inflação. Isso abalou os fundamentos das sociedades liberais, mostrando a fragilidade do modelo.'},
+        {resp:'A', explic:'A crise do colonialismo, o crescimento do nacionalismo e o surgimento de regimes totalitários criaram um ambiente de instabilidade e conflito, tornando a primeira metade do século XX extremamente violenta.'},
+        {resp:'B', explic:'A desigualdade de desenvolvimento entre as nações europeias, o imperialismo agressivo e a corrida armamentista aumentaram as rivalidades e foram causas diretas do conflito.'},
+        {resp:'A', explic:'O nacionalismo eslavo, aliado à desagregação do Império Turco, foi fundamental para o surgimento de tensões nos Bálcãs, região considerada o "barril de pólvora" da Europa.'},
+        {resp:'E', explic:'O Tratado de Versalhes, assinado ao final da Primeira Guerra, impôs duras sanções econômicas, territoriais e militares à Alemanha, alimentando ressentimentos e instabilidade política no país.'},
+        {resp:'C', explic:'A questão balcânica envolvia o interesse russo nos estreitos, o nacionalismo eslavo e o temor austríaco quanto à formação da Grande Sérvia, tornando a região um foco de tensão internacional.'},
+        {resp:'E', explic:'A Primeira Guerra Mundial expôs as contradições do liberalismo europeu, levando à difusão de ideias que questionavam o sistema e impulsionando movimentos sociais e políticos alternativos.'},
+        {resp:'C', explic:'A Primeira Guerra resultou na criação de novos países, como a Iugoslávia, especialmente devido às questões políticas e étnicas dos Bálcãs.'},
+        {resp:'A', explic:'O Tratado de Versalhes responsabilizou a Alemanha pela guerra, impondo pesadas sanções que resultaram em crise econômica, desemprego e instabilidade política, criando o ambiente para o surgimento de movimentos radicais.'}
+      ];
+
+      function showQuestion(idx) {
+        questions.forEach((q, i) => q.style.display = i === idx ? 'block' : 'none');
+        // Atualiza barra de progresso
+        let pct = Math.round(((idx+1)/totalQuestions)*100);
+        progressBar.style.width = pct + '%';
+        progressText.textContent = `Questão ${idx+1}/${totalQuestions}`;
+      }
+
+      // Cronômetro
+      function startTimer() {
+        timerInterval = setInterval(() => {
+          if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            finishQuiz(true);
+            return;
+          }
+          timeLeft--;
+          let min = String(Math.floor(timeLeft/60)).padStart(2,'0');
+          let sec = String(timeLeft%60).padStart(2,'0');
+          timerEl.textContent = `${min}:${sec}`;
+          if (timeLeft <= 60) timerEl.style.color = '#ff4c4c';
+        }, 1000);
+      }
+
+      // Função para entrar em "fullscreen" visual
+      function enterQuizFullscreen() {
+        document.body.classList.add('fullscreen-quiz');
+        backBtn.style.display = 'block';
+      }
+      // Função para sair do "fullscreen"
+      function exitQuizFullscreen() {
+        document.body.classList.remove('fullscreen-quiz');
+        backBtn.style.display = 'none';
+      }
+
+      // Botão para voltar ao site (topo)
+      backBtn.onclick = function() {
+        exitQuizFullscreen();
+        window.location.href = "inicioquiz.html";
+      };
+
+      // Botão para reiniciar quiz
+      restartBtn.onclick = function() {
+        questions.forEach(q => q.style.display = 'none');
+        questions[0].style.display = 'block';
+        quizEndActions.style.display = 'none';
+        quizForm.reset();
+        document.getElementById('msg').textContent = '';
+        gabaritoDiv.style.display = 'none';
+        currentQuestion = 0;
+        timeLeft = 20*60;
+        timerEl.textContent = '20:00';
+        timerEl.style.color = '';
+        startTimer();
+        showQuestion(0);
+      };
+
+      // Iniciar quiz
+      enterQuizFullscreen();
+      showQuestion(0);
+      startTimer();
+
+      // Avançar apenas ao clicar no botão "Validar resposta"
+      quizForm.addEventListener('click', function(e) {
+        if (e.target.classList.contains('next-btn')) {
+          e.preventDefault();
+          const qDiv = e.target.closest('.question');
+          const idx = Array.from(questions).indexOf(qDiv);
+          const qInputs = qDiv.querySelectorAll('input[type=radio]');
+          let answered = false;
+          qInputs.forEach(inp => { if (inp.checked) answered = true; });
+          if (!answered) {
+            document.getElementById('msg').innerHTML = '<span style="color:#ff4c4c;font-weight:bold;">⚠️ Ops! Você precisa marcar uma alternativa para avançar.<br>Não deixe a história sem resposta!</span>';
+            return;
+          }
+          document.getElementById('msg').textContent = '';
+          if (idx < questions.length - 1) {
+            currentQuestion = idx + 1;
+            showQuestion(currentQuestion);
+          }
+        }
+        if (e.target.classList.contains('prev-btn')) {
+          e.preventDefault();
+          if (currentQuestion > 0) {
+            questions[currentQuestion].style.display = 'none';
+            currentQuestion--;
+            showQuestion(currentQuestion);
+          }
+          document.getElementById('msg').textContent = '';
+        }
+      });
+
+      // Finalizar quiz
+      function finishQuiz(timeout=false) {
+        clearInterval(timerInterval);
+        let acertos = 0;
+        let respostas = [];
+        for (let i = 0; i < totalQuestions; i++) {
+          const marcada = quizForm.querySelector(`input[name="q${i+1}"]:checked`);
+          respostas.push(marcada ? marcada.value : null);
+          if (marcada && marcada.value === gabarito[i].resp) acertos++;
+        }
+        let msg = timeout ? '⏰ Tempo esgotado! Veja o gabarito e tente novamente.' : `Quiz finalizado! Você acertou ${acertos} de ${totalQuestions}.`;
+        document.getElementById('msg').innerHTML = `<span style="color:${acertos>=7?'lightgreen':'#ff4c4c'};font-weight:bold;">${msg}</span>`;
+        questions[currentQuestion].style.display = 'none';
+        quizEndActions.style.display = 'flex';
+        // Exibir gabarito com explicações
+        let gabHtml = '<h3 style="color:#6b5e3a;">Gabarito e Explicações</h3><ol style="text-align:left;">';
+        for (let i = 0; i < totalQuestions; i++) {
+          let correta = gabarito[i].resp;
+          let explic = gabarito[i].explic;
+          let marcada = respostas[i] || '-';
+          let cor = marcada === correta ? 'lightgreen' : '#ff4c4c';
+          gabHtml += `<li><b>Questão ${i+1}:</b> Resposta correta: <span style="color:green">${correta}</span> | Sua resposta: <span style="color:${cor}">${marcada}</span><br><small>${explic}</small></li>`;
+        }
+        gabHtml += '</ol>';
+        gabaritoDiv.innerHTML = gabHtml;
+        gabaritoDiv.style.display = 'block';
+      }
+
+      // Ao finalizar quiz
+      quizForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const qDiv = questions[questions.length - 1];
+        const qInputs = qDiv.querySelectorAll('input[type=radio]');
+        let answered = false;
+        qInputs.forEach(inp => { if (inp.checked) answered = true; });
+        if (!answered) {
+          document.getElementById('msg').innerHTML = '<span style="color:#ff4c4c;font-weight:bold;">⚠️ Marque uma alternativa antes de finalizar!<br>Não deixe a última questão sem resposta.</span>';
+          return;
+        }
+        finishQuiz();
+      });
+    });
+  </script>
+</body>
+</html>
